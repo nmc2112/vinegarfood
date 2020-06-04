@@ -1,0 +1,100 @@
+<!-- BEGIN: CONTACT -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Contact Us - Vinegar-food-restaurant</title>
+    <link rel="icon" href="./assets/logo/logo.ico">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akronim">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <style>
+        .menu{
+            text-decoration: none;
+            color:rgb(235, 252, 3);
+            text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.8);
+            font-family: Allan, cursive;
+            font-size: 1.3rem;
+        }
+        .menu:hover{
+            color: rgb(0, 204, 255);
+            font-size: 2rem;
+            transition: all 0.2s ease;
+        }
+        #menu-active{
+            color:rgb(0, 255, 55);
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+    <main class="page contact-us-page" style="margin-top: 9rem">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Contact Us</h2>
+                    <p>Go and come with us!</p>
+                </div>
+                <div class="row">
+                    <div class="col col-md-4">
+                        <form>
+                            <div class="form-group"><label>Name</label><input class="form-control" type="text"></div>
+                            <div class="form-group"><label>Subject</label><input class="form-control" type="text"></div>
+                            <div class="form-group"><label>Email</label><input class="form-control" type="email"></div>
+                            <div class="form-group"><label>Message</label><textarea class="form-control"></textarea></div>
+                            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Send</button></div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div id="map" style="height: 500px; width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        function initMap(){
+            // Map options
+            var options = {
+                zoom: 15,
+                center: {lat: 21.00361050000003, lng: 105.8491726}
+            }
+
+            // New maps
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            // Add marker
+            var marker = new google.maps.Marker({
+                position:{lat: 21.00361050000003, lng: 105.8491726},
+                map: map
+            })
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtXSBnlfuhbciSRhTZL6xlEHqxPE2eJu4&callback=initMap"
+    async defer></script>
+</body>
+
+</html>
+<!-- END: CONTACT -->

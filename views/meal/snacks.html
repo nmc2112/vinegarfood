@@ -1,0 +1,116 @@
+<!-- BEGIN: MEAL -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Meals - Vinegar-food-restaurant</title>
+    <link rel="icon" href=".././assets/logo/logo.ico">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akronim">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allura">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="../assets/css/smoothproducts.css">
+    <main class="container-fluid" style=" width: 100%; margin-left: -15px; margin-right: -15px;">
+        <div id="banner" >
+            <img src="../assets/img/bg1.jpg" alt="">
+            <div class="centered"><h3 style="color: white; font-size: 40px;">Meals</h3></div>
+            <div id="detail">
+                <ul>
+                    <li><a href="regular">REGULAR</a></li>
+                    <li><a  href="lunch">LUNCH</a></li>
+                    <li><a style="color:rgb(235, 252, 3)" href="snacks">SNACKS</a></li>
+                    <li><a href="dessert">DESSERT</a></li>
+                    <li style="border-right: 0;"><a href="beverages">BEVERAGES</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="meals" style="width: 102%">
+            <div class="container row" style="margin: 0 auto">
+                <!-- BEGIN: SNACK -->
+                <div class="col-md-4">
+                    <br>
+                    <img style="width: 100%; height: 300px;margin: 0 auto" src="{SNACK.meal_img}" alt="">
+                    <p id="title" style="text-align: center; margin-top: 1rem; color: white;font-size: 17px;">{SNACK.meal_name}</p>
+                </div>
+                <!-- END: SNACK -->
+            </div>
+        </div>
+        
+    </main>
+    <style>
+        #banner{
+            height: 650px;
+            position: relative;
+            text-align: center;
+        }
+        #banner img{
+            width: 102%;
+            height: 100%;
+        }
+        #detail{
+            position: absolute;
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            color: white;
+            background-color: rgb(44, 43, 43);
+            opacity: 0.9;
+            top: 96%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        #detail ul{
+            list-style-type: none;
+        }
+        #detail ul li{  
+            display: inline;
+            font-size: 25px;
+            text-align: center;
+        }
+        #detail ul li a{
+            text-decoration: none;
+            padding: 25px;
+            color: white;
+        }
+        #detail ul li a:hover{
+            color: rgb(0, 204, 255);
+
+        }
+        .meals{
+            height: auto;            
+            background-color: rgb(49, 49, 49);
+
+        }
+        @media only screen and (max-width: 1000px) {
+            #banner{
+            width: 102%;
+            height: 60%;
+        }
+        }
+        @media only screen and (max-width: 550px) {
+            #banner{
+            width: 102%;
+            height: 50%;
+        }
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+
+<!-- END: MEAL -->

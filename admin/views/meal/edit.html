@@ -1,0 +1,136 @@
+<!-- BEGIN: EDIT -->
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
+
+<body>
+    <form method="POST" enctype="multipart/form-data">
+    <table class="table bordered">
+        <tr>
+            <th>Meal Name</th>
+            <td>
+                <input name="meal_name" value="{EDIT.meal_name}" type="text">
+                <span style="color: red">{meal_name_err_mess}</span>
+            </td>
+        </tr>   
+        <tr>
+            <th>Ingredients</th>
+            <td>
+                <textarea type="text" name="meal_ingre" value="" class="form-control" >{EDIT.meal_ingre}</textarea>
+                <span style="color: red;">{meal_ingre_err_mess}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Advertise</th>
+            <td>
+                <textarea type="text" name="meal_adv"  class="form-control" >{EDIT.meal_adv}</textarea> 
+                <span style="color: red;">{meal_adv_err_mess}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Meal Price</th>
+            <td>
+                <input name="meal_price" value="{EDIT.meal_price}"type="text">
+                <span style="color: red">{meal_price_err_mess}</span>
+            </td>
+        </tr> 
+        <tr>
+            <th>Meal Image</th>
+            <td >
+                <div class="box">
+                    <img class="thumbnail box-center" id="preview_img" alt="No image" src="../../{EDIT.meal_img}">
+                </div>
+                <h5 style="font-weight: bolder;">Please choose a file on your computer.</h5>
+                <input type="file" name="upload_file_added" style="margin: auto;">
+                <span style="color: red">{meal_img_err_mess}</span>
+            </td>
+        </tr> 
+    </table>
+    <input type="button" data-id="{EDIT.meal_id}" onclick="goDelete()" id="deleteButton" value="Delete">
+    <input type="submit" id="editButton" value="Update">
+    </form> 
+</body>
+</html>
+<script>
+    function goDelete(){
+        $(document).on('click','#deleteButton',function(){
+            var id = $(this).attr('data-id');
+            var y = confirm("Are you sure want to delete this product? This will delete all the information of this product !");
+            if(y==false) return 0;
+            window.location.assign("../../meal/delete&id="+id+"/"); 
+        })
+    }
+</script>
+<style>
+    table{
+            width: 85%;
+            border-collapse: collapse;
+            margin-top: 1%;
+    }
+    table tr{
+        height: 40px;
+    }
+    table th{
+        text-align: center;
+        width: 200px;
+    }
+    
+    table tr td input[type=text]{
+        width:100%;
+        height: 100%;
+        border:0;
+        outline: none;
+        padding-left: 20px;
+    }
+    table tr td a{
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+    table tr td a:hover{
+        color: black;
+        font-weight: bolder;
+    }
+    .box img{
+        width: 200px;
+        margin: auto ;
+        border: 2px solid rgb(128, 36, 0);
+    }
+    .row{
+        margin-left: auto;
+    }
+    #editButton{
+        height: 2.5rem;
+        width: 6rem;
+        margin-top: 1%;
+        border: 1px solid gray;
+        border-radius: 20px;
+        font-weight: 600;            
+        line-height: 30px;
+        color: white;
+        background: linear-gradient(to right, rgb(112, 6, 2), rgb(201, 89, 24));
+        cursor: pointer;
+        display: inline-block;
+        margin-bottom: 5%;
+        float: right;
+    }
+    #deleteButton{
+        height: 2.5rem;
+        width: 6rem;
+        margin-top: 1%;
+        border: 1px solid gray;
+        border-radius: 20px;
+        line-height: 30px;
+        color: white;
+        font-weight: 600;            
+        background: linear-gradient(to right, rgb(112, 6, 2), rgb(201, 89, 24));
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        margin-right: 15%;
+        margin-left: 0.5%;
+        margin-bottom: 5%;
+    }
+        
+</style>
+<!-- END: EDIT -->
